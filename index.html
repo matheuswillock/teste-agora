@@ -8,10 +8,10 @@
   </head>
   <body>
     <div id="fila"></div>
-    <button onclick="gerarFila()">Gerar fila</button>
+    <button onclick="generateQueue()">Gerar fila</button>
     
     <script>
-      function gerarFila() {
+      function generateQueue() {
         fetch('/gerarfila').then(response => response.text())
           .then(fila => {
             document.getElementById('fila').innerText = fila;
