@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Fila de Prioridade</title>
+  </head>
+  <body>
+    <div id="fila"></div>
+    <button onclick="gerarFila()">Gerar fila</button>
+    
+    <script>
+      function gerarFila() {
+        fetch('/gerarfila').then(response => response.text())
+          .then(fila => {
+            document.getElementById('fila').innerText = fila;
+        });
+      }
+    </script>
+
+  </body>
+</html>
